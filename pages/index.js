@@ -2,7 +2,7 @@ import PageTitle from "../components/shared/PageTitle";
 import { faArrowUpShortWide, faUser, faArrowTrendUp, faArrowTrendDown, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import StatisticsDetailsCard from "../components/Dashboard/shared/StatisticsDetailsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Area, AreaChart, CartesianGrid, Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, ResponsiveContainer, Tooltip } from "recharts";
 
 export default function Home() {
   const data = [
@@ -114,7 +114,7 @@ export default function Home() {
           }
         </div>
         <div className="lg:col-span-4">
-          <div className="p-6 rounded-lg relative" style={{ background: "linear-gradient(to left, #1e66ff, #2262d3)" }}>
+          <div className="p-6 rounded-lg h-full" style={{ background: "linear-gradient(to left, #1e66ff, #2262d3)" }}>
             <div className='flex justify-between items-center'>
               <h3 className='text-xl'>Total Sales</h3>
               <div className="dropdown dropdown-bottom dropdown-end">
@@ -139,7 +139,7 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <ResponsiveContainer  width="100%" height={250}>
+              <ResponsiveContainer width="100%" height={250}>
                 <AreaChart data={data}
                   margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                   <defs>
