@@ -1,11 +1,11 @@
 import PageTitle from "../components/shared/PageTitle";
-import { faArrowUpShortWide, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpShortWide, faUser, faArrowTrendUp, faArrowTrendDown } from "@fortawesome/free-solid-svg-icons";
 import StatisticsDetailsCard from "../components/Dashboard/shared/StatisticsDetailsCard";
 
 export default function Home() {
   const dashboardStatisticsDetails = [
     {
-      StatusIcon: faArrowUpShortWide,
+      statusIcon: faArrowTrendUp,
       title: "Total Users",
       totalValue: 277,
       percentValue: "+95",
@@ -18,40 +18,40 @@ export default function Home() {
 
     },
     {
-      StatusIcon: faArrowUpShortWide,
+      statusIcon: faArrowTrendDown,
       title: "Total Users",
       totalValue: 277,
       percentValue: "+95",
       itemIcon: faUser,
       bottomText: "Last Month",
-      bgColor1: "#ddd",
-      bgColor2: "#555",
+      bgColor1: "#ed68ff",
+      bgColor2: "#be0ee1",
 
 
 
     },
     {
-      StatusIcon: faArrowUpShortWide,
+      statusIcon: faArrowTrendDown,
       title: "Total Users",
       totalValue: 277,
       percentValue: "+95",
       itemIcon: faUser,
       bottomText: "Last Month",
-      bgColor1: "#4eda89",
-      bgColor2: "#1a9f53",
+      bgColor1: "#64b3f6",
+      bgColor2: "#2b77e5",
 
 
 
     },
     {
-      StatusIcon: faArrowUpShortWide,
+      statusIcon: faArrowTrendUp,
       title: "Total Users",
       totalValue: 277,
       percentValue: "+95",
       itemIcon: faUser,
       bottomText: "Last Month",
-      bgColor1: "#4eda89",
-      bgColor2: "#1a9f53",
+      bgColor1: "#f4d02b",
+      bgColor2: "#e1940e",
 
 
 
@@ -62,7 +62,7 @@ export default function Home() {
     <div>
       <PageTitle title="Dashboard" breadcrumbs={breadcrumbs} />
       <div className="m-5 grid grid-cols-12 gap-5">
-        <div className="col-span-8  grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="col-span-8  grid grid-cols-1 lg:grid-cols-2 gap-5">
           {
             dashboardStatisticsDetails.map((item, index) => <StatisticsDetailsCard item={item} key={index} />)
           }
