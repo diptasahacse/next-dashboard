@@ -105,9 +105,9 @@ export default function Home() {
   ];
   const breadcrumbs = "Home ~ Dashboard"
   return (
-    <div>
+    <div className="m-5">
       <PageTitle title="Dashboard" breadcrumbs={breadcrumbs} />
-      <div className="m-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div className=" mt-5 grid grid-cols-1 lg:grid-cols-12 gap-5">
         <div className="lg:col-span-8  grid grid-cols-1 lg:grid-cols-2 gap-5">
           {
             dashboardStatisticsDetails.map((item, index) => <StatisticsDetailsCard item={item} key={index} />)
