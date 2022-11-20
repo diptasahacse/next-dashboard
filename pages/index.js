@@ -1,8 +1,9 @@
 import PageTitle from "../components/shared/PageTitle";
-import { faArrowUpShortWide, faUser, faArrowTrendUp, faArrowTrendDown, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faArrowTrendUp, faArrowTrendDown, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import StatisticsDetailsCard from "../components/Dashboard/shared/StatisticsDetailsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Area, AreaChart, ResponsiveContainer, Tooltip } from "recharts";
+import BestSellingProducts from "../components/Dashboard/BestSellingProducts";
 
 export default function Home() {
   const data = [
@@ -170,6 +171,7 @@ export default function Home() {
         </div>
 
       </div>
+      <BestSellingProducts />
     </div>
   )
 }
